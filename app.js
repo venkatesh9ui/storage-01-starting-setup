@@ -12,10 +12,10 @@ dbRequest.onupgradeneeded = function (event) {
   objStore.transaction.oncomplete = function (event) {
     const productsStore = db
       .transaction('products', 'readwrite')
-      .objStore('products');
+      .objectStore('products');
     productsStore.add({
       id: 'p1',
-      title: 'A Frist Product',
+      title: 'A First Product',
       price: 12.99,
       tags: ['Expensive', 'Luxury'],
     });
